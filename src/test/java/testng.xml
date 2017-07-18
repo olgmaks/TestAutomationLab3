@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestAll">
+
+	<test name="test configuration">
+		<classes>
+			<class name="com.epam.lab.selenium.gmailtest.TestConfig" />
+		</classes>
+	</test>
+
+	<test name="login">
+		<classes>
+			<class name="com.epam.lab.selenium.gmailtest.LoginTest" />
+		</classes>
+	</test>
+
+	<test name="send message">
+		<classes>
+			<class name="com.epam.lab.selenium.gmailtest.MainPageTest" />
+		</classes>
+	</test>
+	
+	<test name="check message in sendbox">
+		<classes>
+			<class name="com.epam.lab.selenium.gmailtest.SendedFolderTest" />
+		</classes>
+	</test>
+	
+</suite>
