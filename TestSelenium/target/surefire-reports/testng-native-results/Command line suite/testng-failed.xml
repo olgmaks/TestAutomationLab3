@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Command line suite]">
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="com.epam.GmailTest">
+        <methods>
+          <include name="sendMessage"/>
+          <include name="driverQuit"/>
+          <include name="driverInitialize"/>
+          <include name="openGmail"/>
+          <include name="loginToGmail"/>
+          <include name="writeMessageAndClose"/>
+          <include name="verifyIfMessageIsSavedToDraft"/>
+        </methods>
+      </class> <!-- com.epam.GmailTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [Command line suite] -->
