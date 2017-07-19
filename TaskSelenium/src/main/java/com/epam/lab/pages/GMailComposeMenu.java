@@ -1,5 +1,6 @@
 package com.epam.lab.pages;
 
+import com.epam.lab.model.GMailLetter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -52,14 +53,14 @@ public class GMailComposeMenu  {
         buttonSaveAndClose.click();
     }
 
-    public List<String> getDraftLetter(){
-        List<String> list = new ArrayList<>();
-        list.add(userTo.getAttribute("email"));
-        list.add(userCc.getAttribute("email"));
-        list.add(userBcc.getAttribute("email"));
-        list.add(ariaSubject.getAttribute("value"));
-        list.add(ariaMessage.getText());
-        return list;
+    public GMailLetter getDraftLetter(){
+        GMailLetter letter = new GMailLetter();
+        letter.setTo(userTo.getAttribute("email"));
+        letter.setCc(userCc.getAttribute("email"));
+        letter.setBcc(userBcc.getAttribute("email"));
+        letter.setSubject(ariaSubject.getAttribute("value"));
+        letter.setText(ariaMessage.getText());
+        return letter;
     }
     public void clickAria(){
         ariaUsersAddres.click();

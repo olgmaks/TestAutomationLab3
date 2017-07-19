@@ -16,10 +16,6 @@ public abstract class GMailPage {
     @FindBy(id="gbqfb")
     private WebElement searchButton;
 
-    public void checkDraftLetter(){
-        getDraftsLink().click();
-    }
-
     public void checkCompose(){
         getComposeButton().click();
     }
@@ -37,32 +33,15 @@ public abstract class GMailPage {
         return composeButton;
     }
 
-    public void setComposeButton(WebElement composeButton) {
-        this.composeButton = composeButton;
-    }
-
     public WebElement getDraftsLink() {
         return draftsLink;
-    }
-
-    public void setDraftsLink(WebElement draftsLink) {
-        this.draftsLink = draftsLink;
     }
 
     public WebElement getAriaSearch() {
         return ariaSearch;
     }
 
-    public void setAriaSearch(WebElement ariaSearch) {
-        this.ariaSearch = ariaSearch;
-    }
-
     public WebElement getSearchButton() {
         return searchButton;
     }
-
-    public void setSearchButton(WebElement searchButton) {
-        this.searchButton = searchButton;
-    }
-
 }

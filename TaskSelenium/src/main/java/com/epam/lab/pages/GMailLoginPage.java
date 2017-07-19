@@ -5,13 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class GMailPageLogin {
+public class GMailLoginPage {
     @FindBy(id ="identifierId")
     private WebElement loginInput;
     @FindBy(id="identifierNext")
     private WebElement nextLoginButton;
 
-    public GMailPageLogin(WebDriver driver){
+    public GMailLoginPage(WebDriver driver){
         PageFactory.initElements(driver, this);
     }
     public void loginAndSubmit(String login){
