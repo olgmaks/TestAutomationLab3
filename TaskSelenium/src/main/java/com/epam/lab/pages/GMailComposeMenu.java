@@ -1,13 +1,9 @@
 package com.epam.lab.pages;
 
-import com.epam.lab.model.GMailLetter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class GMailComposeMenu  {
     @FindBy(css=".gQ.pE")
@@ -38,34 +34,60 @@ public class GMailComposeMenu  {
     private WebElement ariaUsersAddres;
 
     public GMailComposeMenu(WebDriver driver){
+
         PageFactory.initElements(driver,this);
     }
 
-    public void composeLetter(String to,String cc, String bcc,String subject,
-                              String message){
-        addBcc.click();
-        addCc.click();
-        ariaTo.sendKeys(to);
-        ariaCc.sendKeys(cc);
-        ariaBcc.sendKeys(bcc);
-        ariaSubject.sendKeys(subject);
-        ariaMessage.sendKeys(message);
-        buttonSaveAndClose.click();
-    }
 
-    public GMailLetter getDraftLetter(){
-        GMailLetter letter = new GMailLetter();
-        letter.setTo(userTo.getAttribute("email"));
-        letter.setCc(userCc.getAttribute("email"));
-        letter.setBcc(userBcc.getAttribute("email"));
-        letter.setSubject(ariaSubject.getAttribute("value"));
-        letter.setText(ariaMessage.getText());
-        return letter;
-    }
     public void clickAria(){
         ariaUsersAddres.click();
     }
-    public void send(){
-        sendButton.click();
+
+    public WebElement getAddCc() {
+        return addCc;
+    }
+
+    public WebElement getAddBcc() {
+        return addBcc;
+    }
+
+    public WebElement getAriaTo() {
+        return ariaTo;
+    }
+
+    public WebElement getAriaCc() {
+        return ariaCc;
+    }
+
+    public WebElement getAriaBcc() {
+        return ariaBcc;
+    }
+
+    public WebElement getAriaSubject() {
+        return ariaSubject;
+    }
+
+    public WebElement getAriaMessage() {
+        return ariaMessage;
+    }
+
+    public WebElement getButtonSaveAndClose() {
+        return buttonSaveAndClose;
+    }
+
+    public WebElement getSendButton() {
+        return sendButton;
+    }
+
+    public WebElement getUserTo() {
+        return userTo;
+    }
+
+    public WebElement getUserCc() {
+        return userCc;
+    }
+
+    public WebElement getUserBcc() {
+        return userBcc;
     }
 }

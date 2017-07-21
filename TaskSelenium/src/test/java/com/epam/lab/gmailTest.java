@@ -1,9 +1,11 @@
 package com.epam.lab;
 
+import com.epam.lab.businessobject.GMailBox;
+import com.epam.lab.businessobject.GMailLogin;
 import com.epam.lab.help.UserTestInfo;
 import com.epam.lab.model.GMailLetter;
-import com.epam.lab.pages.*;
 
+import com.epam.lab.util.DriverConnectionUtil;
 import org.junit.Assert;
 
 import org.openqa.selenium.WebDriver;
@@ -16,7 +18,7 @@ public class GMailTest {
 
     @BeforeTest
     public void start(){
-        driver = ConnectDriver.getChromeWebDriver();
+        driver = DriverConnectionUtil.getChromeWebDriver();
     }
 
     @AfterTest
@@ -27,20 +29,14 @@ public class GMailTest {
     @Test
     public void loginTest(){
 
-        GMailBox mailBox = new GMailBox();
-        mailBox.loginInEmail(driver,UserTestInfo.LOGIN,UserTestInfo.PASSWORD);
+        GMailLogin login = new GMailLogin();
+        GMailBox mailBox = new GMailBox(driver);
 
-        GMailPage letter = new GMailDraftPage(driver);
-        letter.checkCompose();
-        letter.createComposeMenu().composeLetter(UserTestInfo.TO,UserTestInfo.CC,
+        login.loginInEmail(driver,UserTestInfo.LOGIN,UserTestInfo.PASSWORD);
+        mailBox.composeLetter(UserTestInfo.TO,UserTestInfo.CC,
                 UserTestInfo.BCC,UserTestInfo.SUBJECT,UserTestInfo.TEXT);
 
-        GMailDraftPage draft = new GMailDraftPage(driver);
-        draft.openDraft();
-        draft.openLastDraftLetter();
-        GMailComposeMenu menu = draft.createComposeMenu();
-        menu.clickAria();
-        GMailLetter letterUser = menu.getDraftLetter();
+        GMailLetter letterUser = mailBox.getDraftLetter();
 
         Assert.assertEquals(UserTestInfo.TO,letterUser.getTo());
         Assert.assertEquals(UserTestInfo.CC,letterUser.getCc());
@@ -48,6 +44,6 @@ public class GMailTest {
         Assert.assertEquals(UserTestInfo.SUBJECT,letterUser.getSubject());
         Assert.assertEquals(UserTestInfo.TEXT,letterUser.getText());
 
-        menu.send();
+        mailBox.send();
     }
 }
