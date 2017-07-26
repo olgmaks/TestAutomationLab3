@@ -1,46 +1,46 @@
 package com.epam.lab;
 
 import org.testng.annotations.Test;
-import org.testng.annotations.BeforeMethod;
 
-import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import com.epam.lab.projectBOs.LoginBO;
+import com.epam.lab.projectBOs.MailBO;
+import com.epam.lab.util.Driver;
+import com.epam.lab.util.PropertiesLoader;
+
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
+import java.util.Properties;
 import org.testng.annotations.AfterMethod;
 
 public class TestNGPageObject {
 
-	final static String EMAIL = "olikxom@gmail.com";
-	final static String PASS = "1qaz2wsx3edC";
-	final static String SEND_TO = "inkognito007@i.ua";
-	final static String SUBJECT = "Hello1";
-	final static String TEXT = "Greetings from Selenium WebDriver";
-
-	public WebDriver driver;
-
 	@BeforeMethod
-	public void beforeMethod() {
-		System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-		driver = new ChromeDriver() {
-			{
-				manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			}
-		};
-		driver.get("https://mail.google.com/mail/");
+	public void beforeMethod(){
 	}
 
-	@Test
-	public void testSend() {
-		LoginPage gmailLoginPage = new LoginPage(driver);
-		gmailLoginPage.typeLoginAndSubmit(EMAIL);
-		HomePage gmailHomePage = gmailLoginPage.typePasswordAndSubmit(PASS);
-		gmailHomePage.sendEmail(SEND_TO, SUBJECT, TEXT);
-		gmailHomePage.checkSentAndDelete(SEND_TO, SUBJECT);		
+	@Test(threadPoolSize = 5, dataProvider = "getUsersData")
+	public void testSend(String propName) throws Exception{
+		Properties mailProp = new PropertiesLoader().getProperties(propName + ".properties");
+		LoginBO login = new LoginBO(mailProp);
+		login.loginInEmail();
+		MailBO mailBO = new MailBO(mailProp);
+		mailBO.createAndSendLetter();
+		mailBO.deleteFromSent();		
 	}
+	
+	@DataProvider(name = "getUsersData", parallel = true)
+    public Object[][] setGmailProperties() {
+      return new Object[][] {      
+       {"gmail1"},
+       {"gmail2"},
+       {"gmail3"}       
+      };
+    }
 
 	@AfterMethod
 	public void afterMethod() {
-		driver.quit();
+		Driver.quitDriver();
+				
 	}
 
 }
