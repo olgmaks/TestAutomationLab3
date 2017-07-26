@@ -1,105 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="64d1d3dd-a0d4-4c91-bc7a-1df4bdd63a1d" name="Default" comment="added decorator, bug fix">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_nodep_3_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_64.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_codeborne_phantomjsdriver_1_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_21_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_4_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_platform_4_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_cssparser_cssparser_0_9_22.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_2_26.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_core_js_2_26.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_neko_htmlunit_2_25.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_exec_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_5_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_client_9_4_3_v20170317.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_4_3_v20170317.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_4_1_v20170120.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_4_1_v20170120.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_api_9_4_3_v20170317.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_client_9_4_3_v20170317.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_websocket_websocket_common_9_4_3_v20170317.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_htmlunit_driver_2_26.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_3_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_3_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_edge_driver_3_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_3_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_3_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_3_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_opera_driver_3_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_3_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_3_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_3_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_w3c_css_sac_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_serializer_2_7_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_xalan_2_7_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xercesImpl_2_11_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_4_01.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/selenium-example.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/epam/lab/CustomFieldDecorator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/epam/lab/DriverProvider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/epam/lab/bo/GmailHomePageBO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/epam/lab/bo/GmailLoginPageBO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/epam/lab/control/AbstractElement.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/epam/lab/control/Button.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/epam/lab/control/Label.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/epam/lab/control/Textarea.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/epam/lab/GmailTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/src/test/java/com/epam/lab/GmailTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/src/test/java/com/epam/lab/PageLoader.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/src/test/java/com/epam/lab/models/pages/DrivenWebPage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/target/classes/com/epam/lab/consts/Constants.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/target/classes/com/epam/lab/models/Message.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/target/classes/com/epam/lab/models/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/target/test-classes/com/epam/lab/GmailTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/target/test-classes/com/epam/lab/PageLoader.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/target/test-classes/com/epam/lab/models/pages/DrivenWebPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/target/test-classes/com/epam/lab/models/pages/GmailHomePage$MessageForm.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/target/test-classes/com/epam/lab/models/pages/GmailHomePage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/target/test-classes/com/epam/lab/models/pages/GmailLoginPage.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/EPAMTaLabPOLohvyniuk.iml" afterPath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/src/main/java/com/epam/lab/consts/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/lab/consts/Constants.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/src/main/java/com/epam/lab/models/Message.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/lab/models/Message.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/src/main/java/com/epam/lab/models/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/lab/models/User.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/src/main/resources/chromedriver.exe" afterPath="$PROJECT_DIR$/src/main/resources/chromedriver.exe" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/src/test/java/com/epam/lab/models/pages/GmailHomePage.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/lab/pages/GmailHomePage.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/src/test/java/com/epam/lab/models/pages/GmailLoginPage.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/lab/pages/GmailLoginPage.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/target/classes/chromedriver.exe" afterPath="$PROJECT_DIR$/target/classes/chromedriver.exe" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/test-output/bullet_point.png" afterPath="$PROJECT_DIR$/test-output/bullet_point.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/test-output/collapseall.gif" afterPath="$PROJECT_DIR$/test-output/collapseall.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/test-output/emailable-report.html" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/test-output/failed.png" afterPath="$PROJECT_DIR$/test-output/failed.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/test-output/index.html" afterPath="$PROJECT_DIR$/test-output/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/test-output/jquery-1.7.1.min.js" afterPath="$PROJECT_DIR$/test-output/jquery-1.7.1.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/test-output/navigator-bullet.png" afterPath="$PROJECT_DIR$/test-output/navigator-bullet.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/test-output/old/index.html" afterPath="$PROJECT_DIR$/test-output/old/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/test-output/passed.png" afterPath="$PROJECT_DIR$/test-output/passed.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/test-output/skipped.png" afterPath="$PROJECT_DIR$/test-output/skipped.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/test-output/testng-reports.css" afterPath="$PROJECT_DIR$/test-output/testng-reports.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/test-output/testng-reports.js" afterPath="$PROJECT_DIR$/test-output/testng-reports.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/EPAMTaLabPOLohvyniuk/test-output/testng-results.xml" afterPath="$PROJECT_DIR$/test-output/testng-results.xml" />
+    <list default="true" id="64d1d3dd-a0d4-4c91-bc7a-1df4bdd63a1d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/epam/lab/DriverProvider.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/lab/DriverProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/epam/lab/consts/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/lab/consts/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/epam/lab/pages/GmailHomePage.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/lab/pages/GmailHomePage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/epam/lab/pages/GmailLoginPage.java" afterPath="$PROJECT_DIR$/src/main/java/com/epam/lab/pages/GmailLoginPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/epam/lab/GmailTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/epam/lab/GmailTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -115,7 +23,7 @@
       <file leaf-file-name="GmailHomePageBO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/lab/bo/GmailHomePageBO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
+            <state relative-caret-position="355">
               <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
               <folding />
             </state>
@@ -125,26 +33,37 @@
       <file leaf-file-name="GmailLoginPageBO.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/lab/bo/GmailLoginPageBO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="12" column="55" lean-forward="false" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+            <state relative-caret-position="117">
+              <caret line="10" column="49" lean-forward="true" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GmailHomePage.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DriverProvider.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/lab/DriverProvider.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="12" column="71" lean-forward="true" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GmailHomePage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/lab/pages/GmailHomePage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="104" column="29" lean-forward="true" selection-start-line="104" selection-start-column="29" selection-end-line="104" selection-end-column="29" />
+            <state relative-caret-position="-288">
+              <caret line="105" column="28" lean-forward="false" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
               <folding>
-                <element signature="e#1605#1606#0" expanded="true" />
-                <element signature="e#1645#1646#0" expanded="true" />
-                <element signature="e#1710#1711#0" expanded="true" />
-                <element signature="e#1768#1769#0" expanded="true" />
-                <element signature="e#3121#3122#0" expanded="true" />
-                <element signature="e#3201#3202#0" expanded="true" />
-                <element signature="e#4125#4126#0" expanded="true" />
+                <element signature="e#1621#1622#0" expanded="true" />
+                <element signature="e#1661#1662#0" expanded="true" />
+                <element signature="e#1726#1727#0" expanded="true" />
+                <element signature="e#1784#1785#0" expanded="true" />
+                <element signature="e#3161#3162#0" expanded="true" />
+                <element signature="e#3241#3242#0" expanded="true" />
+                <element signature="e#4092#4093#0" expanded="true" />
+                <element signature="e#4189#4190#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -155,16 +74,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-299">
               <caret line="303" column="38" lean-forward="true" selection-start-line="303" selection-start-column="38" selection-end-line="303" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Button.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/lab/control/Button.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -192,11 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GmailTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GmailTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/lab/GmailTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="31" column="4" lean-forward="false" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+            <state relative-caret-position="714">
+              <caret line="42" column="64" lean-forward="false" selection-start-line="42" selection-start-column="64" selection-end-line="42" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -207,8 +116,8 @@
       <file leaf-file-name="GmailLoginPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/lab/pages/GmailLoginPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="33" column="86" lean-forward="false" selection-start-line="33" selection-start-column="86" selection-end-line="33" selection-end-column="86" />
+            <state relative-caret-position="304">
+              <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -217,9 +126,11 @@
       <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/lab/consts/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="10" column="111" lean-forward="true" selection-start-line="10" selection-start-column="111" selection-end-line="10" selection-end-column="111" />
-              <folding />
+            <state relative-caret-position="372">
+              <caret line="23" column="90" lean-forward="false" selection-start-line="23" selection-start-column="90" selection-end-line="23" selection-end-column="90" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -251,12 +162,13 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/epam/lab/CustomFieldDecorator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/lab/control/Label.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/lab/pages/GmailLoginPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/lab/bo/GmailHomePageBO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/lab/pages/GmailHomePage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/epam/lab/consts/Constants.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/epam/lab/bo/GmailLoginPageBO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/lab/pages/GmailLoginPage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/lab/consts/Constants.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/epam/lab/GmailTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/lab/DriverProvider.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/epam/lab/pages/GmailHomePage.java" />
       </list>
     </option>
   </component>
@@ -598,6 +510,39 @@
       <method />
     </configuration>
     <configuration default="false" name="GmailTest" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.epam.lab.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="selenium-example" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="com.epam.lab" />
+      <option name="MAIN_CLASS_NAME" value="com.epam.lab.GmailTest" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="GmailTest (1)" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.epam.lab.*" />
@@ -1017,14 +962,16 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="TestNG.GmailTest.gmailTest" />
       <item index="1" class="java.lang.String" itemvalue="TestNG.GmailTest" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG.GmailTest (1)" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="3">
         <item index="0" class="java.lang.String" itemvalue="TestNG.GmailTest" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG.GmailTest.gmailTest" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG.GmailTest (1)" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG.GmailTest.gmailTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1039,44 +986,52 @@
       <option name="presentableId" value="Default" />
       <updated>1501003710290</updated>
       <workItem from="1501003717660" duration="2513000" />
-      <workItem from="1501006930345" duration="11331000" />
+      <workItem from="1501006930345" duration="20687000" />
     </task>
+    <task id="LOCAL-00001" summary="added decorator, bug fix">
+      <created>1501019321934</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1501019321935</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GmailTest - 2017.07.26 at 00h 00m 39s.xml">
+    <history-entry file="GmailTest - 2017.07.26 at 02h 46m 34s.xml">
       <configuration name="GmailTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="GmailTest - 2017.07.26 at 00h 01m 42s.xml">
+    <history-entry file="GmailTest - 2017.07.26 at 02h 46m 41s.xml">
       <configuration name="GmailTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="GmailTest - 2017.07.26 at 00h 03m 40s.xml">
+    <history-entry file="GmailTest - 2017.07.26 at 02h 59m 56s.xml">
       <configuration name="GmailTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="GmailTest - 2017.07.26 at 00h 06m 03s.xml">
+    <history-entry file="GmailTest - 2017.07.26 at 03h 03m 14s.xml">
       <configuration name="GmailTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="GmailTest - 2017.07.26 at 00h 08m 26s.xml">
+    <history-entry file="GmailTest - 2017.07.26 at 03h 03m 20s.xml">
       <configuration name="GmailTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="GmailTest - 2017.07.26 at 00h 09m 56s.xml">
+    <history-entry file="GmailTest - 2017.07.26 at 03h 13m 33s.xml">
       <configuration name="GmailTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="GmailTest - 2017.07.26 at 00h 11m 36s.xml">
+    <history-entry file="GmailTest - 2017.07.26 at 03h 21m 36s.xml">
       <configuration name="GmailTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="GmailTest - 2017.07.26 at 00h 13m 20s.xml">
+    <history-entry file="GmailTest - 2017.07.26 at 03h 24m 58s.xml">
       <configuration name="GmailTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="GmailTest - 2017.07.26 at 00h 44m 32s.xml">
+    <history-entry file="GmailTest - 2017.07.26 at 03h 31m 35s.xml">
       <configuration name="GmailTest" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="GmailTest - 2017.07.26 at 00h 46m 02s.xml">
+    <history-entry file="GmailTest - 2017.07.26 at 03h 33m 46s.xml">
       <configuration name="GmailTest" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13844000" />
+    <option name="totallyTimeSpent" value="23200000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1099,7 +1054,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43317232" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1133,7 +1088,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="4" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1171,13 +1126,14 @@
         <state relative-caret-position="2142">
           <caret line="126" column="54" lean-forward="false" selection-start-line="126" selection-start-column="54" selection-end-line="126" selection-end-column="54" />
           <folding>
-            <element signature="e#1605#1606#0" expanded="true" />
-            <element signature="e#1645#1646#0" expanded="true" />
-            <element signature="e#1710#1711#0" expanded="true" />
-            <element signature="e#1768#1769#0" expanded="true" />
-            <element signature="e#3121#3122#0" expanded="true" />
-            <element signature="e#3201#3202#0" expanded="true" />
-            <element signature="e#4125#4126#0" expanded="true" />
+            <element signature="e#1621#1622#0" expanded="true" />
+            <element signature="e#1661#1662#0" expanded="true" />
+            <element signature="e#1726#1727#0" expanded="true" />
+            <element signature="e#1784#1785#0" expanded="true" />
+            <element signature="e#3161#3162#0" expanded="true" />
+            <element signature="e#3241#3242#0" expanded="true" />
+            <element signature="e#4092#4093#0" expanded="true" />
+            <element signature="e#4189#4190#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1218,14 +1174,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/lab/pages.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/lab/DriverProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/lab/CustomFieldDecorator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1249,14 +1197,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="10" column="0" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/lab/pages/GmailLoginPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="33" column="86" lean-forward="false" selection-start-line="33" selection-start-column="86" selection-end-line="33" selection-end-column="86" />
           <folding />
         </state>
       </provider>
@@ -1287,52 +1227,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/lab/pages/GmailHomePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="104" column="29" lean-forward="true" selection-start-line="104" selection-start-column="29" selection-end-line="104" selection-end-column="29" />
-          <folding>
-            <element signature="e#1605#1606#0" expanded="true" />
-            <element signature="e#1645#1646#0" expanded="true" />
-            <element signature="e#1710#1711#0" expanded="true" />
-            <element signature="e#1768#1769#0" expanded="true" />
-            <element signature="e#3121#3122#0" expanded="true" />
-            <element signature="e#3201#3202#0" expanded="true" />
-            <element signature="e#4125#4126#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/lab/bo/GmailHomePageBO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
+        <state relative-caret-position="355">
           <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/lab/consts/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="111" lean-forward="true" selection-start-line="10" selection-start-column="111" selection-end-line="10" selection-end-column="111" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/lab/bo/GmailLoginPageBO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="12" column="55" lean-forward="false" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+        <state relative-caret-position="117">
+          <caret line="10" column="49" lean-forward="true" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/lab/consts/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="23" column="90" lean-forward="false" selection-start-line="23" selection-start-column="90" selection-end-line="23" selection-end-column="90" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/epam/lab/GmailTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="31" column="4" lean-forward="false" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
+        <state relative-caret-position="714">
+          <caret line="42" column="64" lean-forward="false" selection-start-line="42" selection-start-column="64" selection-end-line="42" selection-end-column="64" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/lab/pages/GmailLoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/lab/DriverProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="12" column="71" lean-forward="true" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/epam/lab/pages/GmailHomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-288">
+          <caret line="105" column="28" lean-forward="false" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
+          <folding>
+            <element signature="e#1621#1622#0" expanded="true" />
+            <element signature="e#1661#1662#0" expanded="true" />
+            <element signature="e#1726#1727#0" expanded="true" />
+            <element signature="e#1784#1785#0" expanded="true" />
+            <element signature="e#3161#3162#0" expanded="true" />
+            <element signature="e#3241#3242#0" expanded="true" />
+            <element signature="e#4092#4093#0" expanded="true" />
+            <element signature="e#4189#4190#0" expanded="true" />
           </folding>
         </state>
       </provider>

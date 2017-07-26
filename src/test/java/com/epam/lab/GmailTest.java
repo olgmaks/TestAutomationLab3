@@ -5,12 +5,8 @@ import com.epam.lab.bo.GmailHomePageBO;
 import com.epam.lab.bo.GmailLoginPageBO;
 import com.epam.lab.consts.Constants;
 import com.epam.lab.models.Message;
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import java.util.Random;
 
 import static org.testng.Assert.assertEquals;
 
@@ -20,25 +16,39 @@ public class GmailTest {
 
 
    @Test(dataProvider = "getData")
-   public void gmailTest(String login, String password)throws InterruptedException{
-       WebDriver driver = DriverProvider.getInstance();
+   public void gmailTest(String login, String password, String to, String cc, String bcc, String subject, String message) throws InterruptedException {
+       Message expectedMsg = new Message(to, cc, bcc, subject, message);
        GmailHomePageBO.setHomePage(GmailLoginPageBO.login(login, password));
-       Message expectedMsg = Constants.messages[new Random().nextInt(2)];
        GmailHomePageBO.addNewDraftAndClose(expectedMsg);
-       Message message = GmailHomePageBO.sendLastDraft();
-       assertEquals(message, expectedMsg);
+       Message rsMessage = GmailHomePageBO.sendLastDraft();
+       assertEquals(rsMessage, expectedMsg);
        Thread.sleep(2000L);
-       DriverProvider.getInstance().quit();
+       DriverProvider.getInstance().close();
+       DriverProvider.clear();
+
    }
 
-    @DataProvider
-    public Object [][] getData(){
-       Object [][]result = new Object[Constants.users.length][2];
+/*   @AfterClass
+   public void tearDown () throws InterruptedException{
+       Thread.sleep(2000L);
+       DriverProvider.getInstance().close();
+   }*/
 
-       for(int i = 0 ; i < Constants.users.length; i++){
-           result[i][0] = Constants.users[i].getLogin();
-           result[i][1] = Constants.users[i].getPassword();
-       }
-       return result;
+    @DataProvider(parallel = true)
+    public Object [][] getData(){
+        Object[][] result = new Object[Constants.users.size()][7];
+
+        for (int i = 0; i < Constants.users.size(); i++) {
+            result[i][0] = Constants.users.get(i).getLogin();
+            result[i][1] = Constants.users.get(i).getPassword();
+            result[i][2] = Constants.messages.get(i).getTo();
+            result[i][3] = Constants.messages.get(i).getCc();
+            result[i][4] = Constants.messages.get(i).getBcc();
+            result[i][5] = Constants.messages.get(i).getSubject();
+            result[i][6] = Constants.messages.get(i).getMessage();
+
+        }
+        return result;
+
     }
 }

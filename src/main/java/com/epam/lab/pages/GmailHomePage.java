@@ -4,16 +4,13 @@ import com.epam.lab.CustomFieldDecorator;
 import com.epam.lab.DriverProvider;
 import com.epam.lab.control.Button;
 import com.epam.lab.control.Label;
-import com.epam.lab.control.Textarea;
 import com.epam.lab.models.Message;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class GmailHomePage  {
@@ -42,7 +39,7 @@ public class GmailHomePage  {
 
     public GmailHomePage(WebDriver driver) {
         this.driver = driver;
-        keyAction = new Actions(driver);
+        keyAction = DriverProvider.getActionsInstance();
         PageFactory.initElements(new CustomFieldDecorator(DriverProvider.getInstance()), this);
     }
 
@@ -63,11 +60,11 @@ public class GmailHomePage  {
             messageForm.toField.sendKeys(message.getTo());
     }
     public void setFieldCc(MessageForm messageForm , Message message){
-        keyAction.keyDown(Keys.CONTROL).keyDown(Keys.SHIFT).sendKeys("c").keyUp(Keys.CONTROL).keyUp(Keys.SHIFT).perform();
+        (new Actions(driver)).keyDown(Keys.CONTROL).keyDown(Keys.SHIFT).sendKeys("c").keyUp(Keys.CONTROL).keyUp(Keys.SHIFT).perform();
         messageForm.ccField.sendKeys(message.getCc());
     }
     public void setFieldBcc(MessageForm messageForm, Message message ){
-        keyAction.keyDown(Keys.CONTROL).keyDown(Keys.SHIFT).sendKeys("b").keyUp(Keys.CONTROL).keyUp(Keys.SHIFT).perform();
+        (new Actions(driver)).keyDown(Keys.CONTROL).keyDown(Keys.SHIFT).sendKeys("b").keyUp(Keys.CONTROL).keyUp(Keys.SHIFT).perform();
         messageForm.bccField.sendKeys(message.getBcc());
     }
 
@@ -87,7 +84,7 @@ public class GmailHomePage  {
     }
 
     public MessageForm clickOnLastDraft() {
-        keyAction.moveToElement(firstMessageNotPointedByCursor).build().perform();
+        (new Actions(driver)).moveToElement(firstMessageNotPointedByCursor).build().perform();
         firstMessagePointedByCursor.click();
         return new MessageForm();
     }
@@ -103,7 +100,7 @@ public class GmailHomePage  {
     }
 
     public void sendDraft() {
-        keyAction.keyDown(Keys.LEFT_CONTROL).sendKeys("\n").build().perform();
+        (new Actions(driver)).keyDown(Keys.LEFT_CONTROL).sendKeys("\n").build().perform();
     }
 
     private String formatEmailToUnknownUsersMail(String email) {

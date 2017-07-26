@@ -2,7 +2,6 @@ package com.epam.lab.pages;
 
 import com.epam.lab.CustomFieldDecorator;
 import com.epam.lab.DriverProvider;
-import com.epam.lab.pages.GmailHomePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,12 +29,12 @@ public class GmailLoginPage {
     private WebElement profileIdentifierTitle;
 
     public GmailLoginPage(WebDriver driver) {
+        driver.get("https://mail.google.com/");
         this.driver = driver;
         PageFactory.initElements(new CustomFieldDecorator(DriverProvider.getInstance()), this);
     }
 
     public void typeLoginAndSubmit(String login) {
-        driver.navigate().to("https://mail.google.com/");
         loginInput.sendKeys(login);
         nextButton.click();
         (new WebDriverWait(driver, 10)).until((dr) -> (profileIdentifierTitle).getText().contains(login.toLowerCase()));
