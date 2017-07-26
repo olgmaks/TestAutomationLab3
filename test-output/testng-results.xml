@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="41487" started-at="2017-07-26T06:42:29Z" finished-at="2017-07-26T06:43:10Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="41487" started-at="2017-07-26T06:42:29Z" finished-at="2017-07-26T06:43:10Z">
+      <class name="com.epam.lab.gmail.GmailTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.epam.lab.gmail.GmailTest@5383967b]" name="setUp" is-config="true" duration-ms="8" started-at="2017-07-26T09:42:29Z" finished-at="2017-07-26T09:42:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="markMessagesToImportantAndDelete()[pri:0, instance:com.epam.lab.gmail.GmailTest@5383967b]" name="markMessagesToImportantAndDelete" duration-ms="33155" started-at="2017-07-26T09:42:29Z" finished-at="2017-07-26T09:43:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- markMessagesToImportantAndDelete -->
+        <test-method status="PASS" signature="markMessagesToImportantAndDelete()[pri:0, instance:com.epam.lab.gmail.GmailTest@5383967b]" name="markMessagesToImportantAndDelete" duration-ms="34691" started-at="2017-07-26T09:42:29Z" finished-at="2017-07-26T09:43:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- markMessagesToImportantAndDelete -->
+        <test-method status="PASS" signature="markMessagesToImportantAndDelete()[pri:0, instance:com.epam.lab.gmail.GmailTest@5383967b]" name="markMessagesToImportantAndDelete" duration-ms="40451" started-at="2017-07-26T09:42:29Z" finished-at="2017-07-26T09:43:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- markMessagesToImportantAndDelete -->
+        <test-method status="PASS" signature="markMessagesToImportantAndDelete()[pri:0, instance:com.epam.lab.gmail.GmailTest@5383967b]" name="markMessagesToImportantAndDelete" duration-ms="34743" started-at="2017-07-26T09:42:29Z" finished-at="2017-07-26T09:43:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- markMessagesToImportantAndDelete -->
+        <test-method status="PASS" signature="markMessagesToImportantAndDelete()[pri:0, instance:com.epam.lab.gmail.GmailTest@5383967b]" name="markMessagesToImportantAndDelete" duration-ms="38980" started-at="2017-07-26T09:42:29Z" finished-at="2017-07-26T09:43:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- markMessagesToImportantAndDelete -->
+        <test-method status="PASS" signature="after()[pri:0, instance:com.epam.lab.gmail.GmailTest@5383967b]" name="after" is-config="true" duration-ms="2026" started-at="2017-07-26T09:43:02Z" finished-at="2017-07-26T09:43:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method status="PASS" signature="after()[pri:0, instance:com.epam.lab.gmail.GmailTest@5383967b]" name="after" is-config="true" duration-ms="1894" started-at="2017-07-26T09:43:03Z" finished-at="2017-07-26T09:43:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method status="PASS" signature="after()[pri:0, instance:com.epam.lab.gmail.GmailTest@5383967b]" name="after" is-config="true" duration-ms="1892" started-at="2017-07-26T09:43:03Z" finished-at="2017-07-26T09:43:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method status="PASS" signature="after()[pri:0, instance:com.epam.lab.gmail.GmailTest@5383967b]" name="after" is-config="true" duration-ms="950" started-at="2017-07-26T09:43:08Z" finished-at="2017-07-26T09:43:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+        <test-method status="PASS" signature="after()[pri:0, instance:com.epam.lab.gmail.GmailTest@5383967b]" name="after" is-config="true" duration-ms="1009" started-at="2017-07-26T09:43:09Z" finished-at="2017-07-26T09:43:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after -->
+      </class> <!-- com.epam.lab.gmail.GmailTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
