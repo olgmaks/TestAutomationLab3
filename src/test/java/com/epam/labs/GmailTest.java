@@ -1,49 +1,84 @@
 package com.epam.labs;
 
-import com.epam.labs.pageobject.GmailHomePage;
-import com.epam.labs.pageobject.GmailLoginPage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import com.epam.labs.businessobject.LoginBO;
+import com.epam.labs.businessobject.MessageBO;
+import com.epam.labs.model.Message;
+import com.epam.labs.model.User;
+import com.epam.labs.util.GmailPropertyUtil;
+import com.epam.labs.util.WebDriverUtil;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 public class GmailTest {
 
-    private WebDriver driver;
-    private final static String EMAIL = "smarttestlab123@gmail.com";
-    private final static String PASS = "smart123";
-    private final static String INCORRECT_EMAIL = "wrongemail";
-    private final static String EMAIL_SUBJECT = "Test Subject";
-    private final static String EMAIL_BODY = "Test message.";
+    private final static Logger logger = LogManager.getLogger(GmailTest.class);
+    private GmailPropertyUtil gmailProperties;
+    private final static String CHROME_DRIVER = "webdriver.chrome.driver";
+    private final static String CHROME_DRIVER_PATH = "src/main/resources/chromedriver.exe";
+    private final static String USERS_DATA_PATH = "src/main/resources/users.json";
 
     @BeforeMethod
     public void beforeMethod() {
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-        driver = new ChromeDriver() {
-            {
-                manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-            }
-        };
-        driver.get("https://www.google.com/gmail");
+        try {
+            gmailProperties = new GmailPropertyUtil();
+        } catch (IOException e) {
+            logger.error(e.getMessage());
+        }
+        System.setProperty(CHROME_DRIVER, CHROME_DRIVER_PATH);
+        WebDriverUtil.openURL(gmailProperties.getUrl());
     }
 
-    @Test
-    public void testSend() {
-        GmailLoginPage gmailLoginPage = new GmailLoginPage(driver);
-        gmailLoginPage.typeLoginAndSubmit(EMAIL);
-        GmailHomePage gmailHomePage = gmailLoginPage.typePasswordAndSubmit(PASS);
-        gmailHomePage.sendEmail(INCORRECT_EMAIL, EMAIL_SUBJECT, EMAIL_BODY, false);
-        gmailHomePage.closeWarningDialog();
-        gmailHomePage.sendEmail(EMAIL, EMAIL_SUBJECT, EMAIL_BODY, true);
-        Assert.assertTrue(gmailHomePage.checkSentMails(EMAIL, EMAIL_SUBJECT));
+    @DataProvider(parallel = true)
+    public static Object[][] provideUsers() {
+        JSONParser parser = new JSONParser();
+        Object obj = null;
+        try {
+            obj = parser.parse(new FileReader(USERS_DATA_PATH));
+        } catch (IOException e) {
+            logger.error(e.getMessage());
+        } catch (ParseException e) {
+            logger.error(e.getMessage());
+        }
+        JSONObject jsonObject = (JSONObject) obj;
+        JSONArray usersData = (JSONArray) jsonObject.get("users");
+        ArrayList<User> users = (ArrayList<User>) usersData.stream()
+                .map(u -> new User(((JSONObject) u).get("email").toString(), ((JSONObject) u).get("pass").toString()))
+                .collect(Collectors.toList());
+        Object[][] usersTwoDimList = new Object[users.size()][1];
+        for (int i = 0; i < users.size(); i++) {
+            usersTwoDimList[i][0] = users.get(i);
+        }
+        return usersTwoDimList;
+    }
+
+    @Test(threadPoolSize = 5, dataProvider = "provideUsers")
+    public void testSend(User user) {
+        LoginBO loginBO = new LoginBO(user);
+        Message message = new Message(gmailProperties.getEmail(), gmailProperties.getSubject(), gmailProperties.getBody());
+        MessageBO messageBO = new MessageBO(message, loginBO.login());
+        messageBO.sendEmail();
+        messageBO.closeWarningDialogForWrongEmail();
+        messageBO.getMessage().setTo(user.getEmail());
+        messageBO.repeatSendingEmail();
+        Assert.assertTrue(messageBO.isEmailSent());
     }
 
     @AfterMethod
     public void afterMethod() {
-        driver.quit();
+        WebDriverUtil.close();
     }
 }
