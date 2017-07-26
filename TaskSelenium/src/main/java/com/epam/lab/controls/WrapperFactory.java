@@ -1,10 +1,11 @@
 package com.epam.lab.controls;
 
+import com.epam.lab.controls.elements.Element;
 import org.openqa.selenium.WebElement;
 
 public class WrapperFactory {
-    public static MailElement createInstance(Class<MailElement> clazz, WebElement element) {
-        System.out.println(element.toString());
+    public static Element createInstance(Class<Element> clazz, WebElement element) {
+
         try {
             return clazz.getConstructor(WebElement.class).newInstance(element);
         } catch (Exception e) {

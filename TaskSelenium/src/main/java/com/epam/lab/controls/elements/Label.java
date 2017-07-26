@@ -1,8 +1,8 @@
-package com.epam.lab.controls;
+package com.epam.lab.controls.elements;
 
 import org.openqa.selenium.WebElement;
 
-public class Label extends MailElement
+public class Label extends Element
 {
     public Label(WebElement element)
     {

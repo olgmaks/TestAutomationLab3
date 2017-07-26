@@ -1,18 +1,23 @@
 package com.epam.lab.businessobject;
 
+import com.epam.lab.help.ConfigProperty;
 import com.epam.lab.pages.GMailLoginPage;
-import com.epam.lab.pages.GMailPasswordPage;
-import org.openqa.selenium.WebDriver;
+import com.epam.lab.util.DriverConnectionUtil;
+
 
 public class GMailLogin {
     private GMailLoginPage login;
-    private GMailPasswordPage password;
+    private ConfigProperty property= new ConfigProperty();
 
-    public void loginInEmail(WebDriver driver,String login,String password){
-        this.login = new GMailLoginPage(driver);
+    public void loginInEmail(String login,String password) {
+        this.load();
+        this.login = new GMailLoginPage();
         this.login.loginAndSubmit(login);
-        this.password = new GMailPasswordPage(driver);
-        this.password.passwordAndSubmit(password);
+        this.login.passwordAndSubmit(password);
     }
+    public void load(){
+        DriverConnectionUtil.load(property.getPropertyValue("chrome.url"));
+    }
+
 
 }

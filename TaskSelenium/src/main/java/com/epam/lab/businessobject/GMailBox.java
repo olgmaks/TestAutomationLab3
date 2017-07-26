@@ -6,17 +6,17 @@ import com.epam.lab.pages.GMailDraftPage;
 import org.openqa.selenium.WebDriver;
 
 public class GMailBox {
-
-    GMailDraftPage draftPage ;
     GMailComposeMenu menu;
+    GMailDraftPage draftPage ;
 
-    public GMailBox(WebDriver driver){
-        draftPage = new GMailDraftPage(driver);
-        menu = new GMailComposeMenu(driver);
+
+    public GMailBox(){
+        draftPage = new GMailDraftPage();
     }
 
     public void composeLetter(String to,String cc, String bcc,String subject,
                               String message){
+        menu = new GMailComposeMenu();
         draftPage.checkCompose();
         menu.getAddBcc().click();
         menu.getAddCc().click();
@@ -29,6 +29,7 @@ public class GMailBox {
     }
 
     public GMailLetter getDraftLetter(){
+        menu = new GMailComposeMenu();
         draftPage.openDraft();
         draftPage.openLastDraftLetter();
         GMailLetter letter = new GMailLetter();
@@ -41,6 +42,7 @@ public class GMailBox {
         return letter;
     }
     public void send(){
+
         menu.getSendButton().click();
     }
 }

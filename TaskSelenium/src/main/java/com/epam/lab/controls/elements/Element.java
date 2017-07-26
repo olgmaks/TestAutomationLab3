@@ -1,4 +1,4 @@
-package com.epam.lab.controls;
+package com.epam.lab.controls.elements;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
@@ -10,10 +10,11 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public abstract class MailElement implements WebElement {
+public abstract class Element implements WebElement {
     protected WebElement element;
 
-    public MailElement(WebElement element){
+    public Element(WebElement element){
+
         this.element = element;
     }
 
@@ -24,7 +25,6 @@ public abstract class MailElement implements WebElement {
 
     @Override
     public void click() {
-        System.out.println("click");
         element.click();
     }
 

@@ -1,5 +1,6 @@
 package com.epam.lab.controls;
 
+import com.epam.lab.controls.elements.Element;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.pagefactory.ElementLocator;
 
@@ -11,17 +12,17 @@ import java.util.List;
 
 public class LocatingCustomElementListHandler implements InvocationHandler {
     private final ElementLocator locator;
-    private final Class<MailElement> clazz;
+    private final Class<Element> clazz;
 
-    public LocatingCustomElementListHandler(ElementLocator locator, Class<MailElement> clazz) {
+    public LocatingCustomElementListHandler(ElementLocator locator, Class<Element> clazz) {
         this.locator = locator;
         this.clazz = clazz;
     }
 
     public Object invoke(Object object, Method method, Object[] objects) throws Throwable {
-        System.out.println(method.getName());
+
         List<WebElement> elements = locator.findElements();
-        List<MailElement> customs = new ArrayList<MailElement>();
+        List<Element> customs = new ArrayList<Element>();
 
         for (WebElement element : elements) {
             customs.add(WrapperFactory.createInstance(clazz, element));

@@ -1,43 +1,49 @@
 package com.epam.lab.pages;
 
+import com.epam.lab.controls.CustomFieldDecorator;
+import com.epam.lab.controls.elements.Button;
+import com.epam.lab.controls.elements.Label;
+import com.epam.lab.controls.elements.TextInput;
+import com.epam.lab.util.DriverConnectionUtil;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class GMailComposeMenu  {
     @FindBy(css=".gQ.pE")
-    private WebElement addCc;
+    private Label addCc;
     @FindBy(css=".gQ.pB")
-    private WebElement addBcc;
+    private Label addBcc;
     @FindBy(name="to")
-    private WebElement ariaTo;
+    private TextInput ariaTo;
     @FindBy(name="cc")
-    private WebElement ariaCc;
+    private TextInput ariaCc;
     @FindBy(name="bcc")
-    private WebElement ariaBcc;
+    private TextInput ariaBcc;
     @FindBy(name="subjectbox")
-    private WebElement ariaSubject;
+    private TextInput ariaSubject;
     @FindBy(css=".Al.editable.LW-avf")
-    private WebElement ariaMessage;
+    private TextInput ariaMessage;
     @FindBy(css="img[data-tooltip='Save & Close']")
-    private WebElement buttonSaveAndClose;
+    private Button buttonSaveAndClose;
     @FindBy(css="div[aria-label='Send \u202A(Ctrl-Enter)\u202C']")
-    private WebElement sendButton;
+    private Button sendButton;
     @FindBy(css=".vN.bfK.a3q")
-    private WebElement userTo;
+    private Label userTo;
     @FindBy(css=".vN.bfK.a3p")
-    private WebElement userCc;
+    private Label userCc;
     @FindBy(css=".vN.bfK")
-    private WebElement userBcc;
+    private Label userBcc;
     @FindBy(css=".aoD.hl")
-    private WebElement ariaUsersAddres;
+    private TextInput ariaUsersAddres;
 
-    public GMailComposeMenu(WebDriver driver){
-
-        PageFactory.initElements(driver,this);
+    public GMailComposeMenu(){
+        PageFactory.initElements(new CustomFieldDecorator(DriverConnectionUtil.getWebDriver()),
+                this);
     }
-
 
     public void clickAria(){
         ariaUsersAddres.click();

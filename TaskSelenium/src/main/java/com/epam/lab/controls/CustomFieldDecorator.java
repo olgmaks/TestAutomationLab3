@@ -7,6 +7,7 @@ import java.lang.reflect.Proxy;
 import java.lang.reflect.Type;
 import java.util.List;
 
+import com.epam.lab.controls.elements.Element;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,7 +23,7 @@ public class CustomFieldDecorator extends  DefaultFieldDecorator {
 
     @Override
     public Object decorate(ClassLoader loader, Field field) {
-        Class<MailElement> decoratableClass = decoratableClass(field);
+        Class<Element> decoratableClass = decoratableClass(field);
 
         if (decoratableClass != null) {
             ElementLocator locator = factory.createLocator(field);
@@ -40,7 +41,7 @@ public class CustomFieldDecorator extends  DefaultFieldDecorator {
     }
 
     @SuppressWarnings("unchecked")
-    private Class<MailElement> decoratableClass(Field field) {
+    private Class<Element> decoratableClass(Field field) {
 
         Class<?> clazz = field.getType();
 
@@ -57,31 +58,31 @@ public class CustomFieldDecorator extends  DefaultFieldDecorator {
                     getActualTypeArguments()[0];
         }
 
-        if (MailElement.class.isAssignableFrom(clazz)) {
-            return (Class<MailElement>) clazz;
+        if (Element.class.isAssignableFrom(clazz)) {
+            return (Class<Element>) clazz;
         }
         else {
             return null;
         }
     }
 
-    protected MailElement createElement(ClassLoader loader,
-                                     ElementLocator locator,
-                                     Class<MailElement> clazz) {
+    protected Element createElement(ClassLoader loader,
+                                    ElementLocator locator,
+                                    Class<Element> clazz) {
         WebElement proxy = proxyForLocator(loader, locator);
         return WrapperFactory.createInstance(clazz, proxy);
     }
 
 
     @SuppressWarnings("unchecked")
-    protected List<MailElement> createList(ClassLoader loader,
-                                        ElementLocator locator,
-                                        Class<MailElement> clazz) {
+    protected List<Element> createList(ClassLoader loader,
+                                       ElementLocator locator,
+                                       Class<Element> clazz) {
 
         InvocationHandler handler =
                 new LocatingCustomElementListHandler(locator, clazz);
-        List<MailElement> elements =
-                (List<MailElement>) Proxy.newProxyInstance(
+        List<Element> elements =
+                (List<Element>) Proxy.newProxyInstance(
                         loader, new Class[] {List.class}, handler);
         return elements;
     }
