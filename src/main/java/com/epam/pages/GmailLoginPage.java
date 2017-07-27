@@ -1,36 +1,43 @@
 package com.epam.pages;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import com.epam.PropertyData;
+import com.epam.control.Button;
+import com.epam.control.TextInput;
+import com.epam.webdriverutils.WebDriv;
+import com.epam.webdriverutils.WebDriverUtils;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class GmailLoginPage {
+import java.io.IOException;
 
-    private WebDriver driver;
+public class GmailLoginPage extends PageObject{
 
     @FindBy(name="identifier")
-    private WebElement loginInput;
+    private TextInput loginInput;
 
     @FindBy(id="identifierNext")
-    private WebElement nextButtonLogin;
+    private Button nextButtonLogin;
 
     @FindBy(name="password")
-    private WebElement passwordInput;
+    private TextInput passwordInput;
 
     @FindBy(id="passwordNext")
-    private WebElement nextButtonPassword;
+    private Button nextButtonPassword;
 
-    public GmailLoginPage(WebDriver driver){
-        PageFactory.initElements(driver, this);
-        this.driver = driver;
+    public GmailLoginPage() throws IOException {
+        super();
+        PropertyData.loadData();
+        WebDriverUtils.getDriver().get(PropertyData.getURLFromProperty());
     }
 
-    public GmailPage typeLoginAndPassword(String login, String password){
+    public GmailLoginPage typeLoginAndSubmit(String login){
         loginInput.sendKeys(login);
         nextButtonLogin.click();
+        return this;
+    }
+
+    public GmailPage typePasswordAndSubmit(String password){
         passwordInput.sendKeys(password);
         nextButtonPassword.click();
-        return new GmailPage(driver);
+        return new GmailPage();
     }
 }

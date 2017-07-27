@@ -1,70 +1,70 @@
 package com.epam.pages;
 
-import org.openqa.selenium.WebDriver;
+import com.epam.control.*;
+import com.epam.webdriverutils.WebDriverUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class GmailPage {
-
-    private WebDriver driver;
+public class GmailPage extends PageObject{
 
     @FindBy(className="T-Jo-auh")
-    private List<WebElement> messagesCheckboxes;
+    private List<Checkbox> messagesCheckboxes;
 
     @FindBy(xpath="//div[@class='ar9 T-I-J3 J-J5-Ji']")
-    private WebElement deleteDiv;
+    private Button deleteDivButton;//+
 
-    @FindBy(id="link_undo")
-    private WebElement cancelDeleteSpan;
+    @FindBy(xpath="//span[@id='link_undo']")
+    private Span cancelDeleteSpan;//+
 
-    @FindBy(css="span[class='bofITb']")
-    private WebElement confirmationCancelDeleteSpan;
+    @FindBy(xpath = "//div[@class='vh']")
+    private WebElement divWhereAreSpans;
 
-    @FindBy(xpath="//a[contains(@title, 'vasyl87test@gmail.com')]")
-    private WebElement verificationPage;
+    @FindBy(xpath="//span[@class='bofITb']")
+    private Span confirmationCancelDeleteSpan;//+
+
+    @FindBy(xpath="//a[contains(@title, '@gmail.com')]")
+    private Button verificationPageButton;//+
 
     @FindBy(css="div[aria-checked='true']")
-    private List<WebElement> selectedMessagesCheckboxes;
+    private List<Checkbox> selectedMessagesCheckboxes;//+
 
-    public GmailPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
-        this.driver = driver;
-    }
+    @FindBy(xpath="//table[@class='F cf zt']")
+    private Table table;//+
 
-    public WebElement getCancelDeleteSpan() {
+    public Span getCancelDeleteSpan() {//+
         return cancelDeleteSpan;
     }
 
+    public Table getTable() {
+        return table;
+    }//+
+
     public String verificationThatPageIsOpened(){
-        return verificationPage.getAttribute("title").trim().toString();
-    }
+        return verificationPageButton.getAttribute("title").trim();
+    }//+
 
-    public void selectTreeMessages(){
-        List<String> listSubjects = new ArrayList<>();
-        for (int i = 1; i < 4; i++) {
-            if(!(messagesCheckboxes.get(i).isSelected())) {
-                messagesCheckboxes.get(i).click();
-            }
-        }
-    }
-
-    public int getCountOfSelectedMessages(){
+    public int getCountOfSelectedMessages(){//+
         return selectedMessagesCheckboxes.size();
     }
 
-    public void deleteSelectedMessages(){
-        deleteDiv.click();
+    public void deleteSelectedMessages(){//+
+        deleteDivButton.click();
     }
 
-    public void cancelDeleteMessages(){
+    public void cancelDeleteMessages(){//+
+        new WebDriverWait(WebDriverUtils.getDriver(), 10).
+                until(ExpectedConditions.presenceOfNestedElementLocatedBy(divWhereAreSpans,
+                        By.xpath("//*[@id=\"link_undo\"]")));
         cancelDeleteSpan.click();
     }
 
-    public String verificationThatMessagesWereNotDeleted(){
-        return confirmationCancelDeleteSpan.getText().trim();
+    public String verificationThatMessagesWereNotDeleted(){//+
+        return confirmationCancelDeleteSpan.getText();
     }
+
 }

@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/src/test/java/com/epam/tests/GmailTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/epam/DataHelps.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/epam/PropertyData.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/epam/businessobject/GmailBO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/epam/businessobject/GmailLoginBO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/epam/control/AbstractElement.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/epam/control/Button.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/epam/control/Checkbox.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/epam/control/CustomFieldDecorator.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/epam/control/LocatingCustomElementListHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/epam/control/Span.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/epam/control/Table.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/epam/control/TextInput.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/epam/control/WrapperFactory.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/epam/models/MessageModel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/epam/models/UserModel.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/epam/pages/GmailLoginPage.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/epam/pages/GmailPage.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/epam/pages/PageObject.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/epam/webdriverutils/WebDriverUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/com/epam/tests/SelectThreeMessagesDeleteThemAndThanCancelDeleteTest.java" charset="UTF-8" />
   </component>
 </project>
