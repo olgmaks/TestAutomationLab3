@@ -1,9 +1,16 @@
 package com.epam.labs.model;
 
+import com.univocity.parsers.annotations.Parsed;
+
 public class Message {
 
+    @Parsed(field = "to")
     private String to;
+
+    @Parsed(field = "subject")
     private String subject;
+
+    @Parsed(field = "body")
     private String body;
 
     public Message() {

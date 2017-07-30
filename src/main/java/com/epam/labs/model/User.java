@@ -1,9 +1,17 @@
 package com.epam.labs.model;
 
+import com.univocity.parsers.annotations.Parsed;
+
 public class User {
 
+    @Parsed(field = "email")
     private String email;
+
+    @Parsed(field = "pass")
     private String password;
+
+    public User() {
+    }
 
     public User(String email, String password) {
         super();
