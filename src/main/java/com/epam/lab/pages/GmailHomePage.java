@@ -24,9 +24,6 @@ public class GmailHomePage  {
     @FindBy(xpath = "//div[@class='z0']/div[1]")
     private Button composeButton;
 
-  /*  @FindBy(xpath = "//a[@href='https://mail.google.com/mail/u/0/#drafts']")
-    private Button draftsButton;
-*/
     @FindBy(css = "tr[class ='zA yO']:first-child")
     private WebElement firstMessageNotPointedByCursor;
 
